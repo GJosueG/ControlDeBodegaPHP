@@ -6,7 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empleado extends Model
 {
-    protected $timestamps = false;
+    public $timestamps = false;
 
     protected $table = 'empleados';
+
+    protected $fillable = [
+        'nombre',
+        'telefono',
+        'correo',
+    ];
 }

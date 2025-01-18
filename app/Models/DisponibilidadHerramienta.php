@@ -8,5 +8,5 @@ class DisponibilidadHerramienta extends Model
 {
     protected $table = 'disponibilidad_herramientas';
 
-    protected $timestamps = false;
+    public $timestamps = false;
 }

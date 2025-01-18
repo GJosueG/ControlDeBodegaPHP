@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('catalogo_herramientas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->foreignId('estado_id')->constrained('estados');
+            $table->foreignId('estado_id')
+            ->default(1)
+            ->constrained('estados');
         });
     }
 

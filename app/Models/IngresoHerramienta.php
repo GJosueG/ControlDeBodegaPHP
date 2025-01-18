@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class IngresoHerramienta extends Model
 {
     protected $table = 'ingreso_herramientas';  
-    protected $timestamps = false;
+    public $timestamps = false;
 }

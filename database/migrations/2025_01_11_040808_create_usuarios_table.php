@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('nombre')->unique();
             $table->string('contrasena');
             $table->foreignId('rol_id')->constrained('roles');
-            $table->foreignId('estado_id')->constrained('estados');
+            $table->foreignId('estado_id')
+            ->default(1)
+            ->constrained('estados');
         });
     }
 

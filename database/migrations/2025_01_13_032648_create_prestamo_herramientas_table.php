@@ -16,7 +16,9 @@ return new class extends Migration
             $table->dateTime('fecha_devolucion')->nullable();
             $table->foreignId('prestamo_id')->constrained('prestamos');
             $table->foreignId('herramienta_id')->constrained('herramientas_en_bodega');
-            $table->foreignId('estado_id')->constrained('estados');
+            $table->foreignId('estado_id')
+            ->default(1)
+            ->constrained('estados');
         });
     }
 

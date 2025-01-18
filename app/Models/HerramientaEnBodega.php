@@ -8,5 +8,5 @@ class HerramientaEnBodega extends Model
 {
     protected $table = 'herramientas_en_bodega';
 
-    protected $timestamps = false;
+    public $timestamps = false;
 }

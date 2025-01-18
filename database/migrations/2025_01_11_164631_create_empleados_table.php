@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('telefono');
-            $table->foreignId('estado_id')->constrained('estados');
+            $table->string('correo');
+            $table->foreignId('estado_id')
+            ->default(1)
+            ->constrained('estados'); 
         });
     }
 

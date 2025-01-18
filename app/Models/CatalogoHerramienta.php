@@ -8,5 +8,5 @@ class CatalogoHerramienta extends Model
 {
     protected $table = 'catalogo_herramientas';
 
-    protected $timestamps = false;
+    public $timestamps = false;
 }

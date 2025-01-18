@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('codigo_en_bodega');
             $table->string('estado_de_uso');
-            $table->foreignId('herramienta_id')->constrained('herramientas'); 
+            $table->foreignId('herramienta_id')->constrained('catalogo_herramientas'); 
             $table->foreignId('disponibilidad_id')->constrained('disponibilidad_herramientas'); 
-            $table->foreignId('estado_id')->constrained('estados'); 
+            $table->foreignId('estado_id')
+            ->default(1)
+            ->constrained('estados');
         });
     }
 
